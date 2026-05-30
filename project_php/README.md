@@ -1,6 +1,6 @@
 ## Anggota Kelompok 3
 
-1 **Khairunnisa Nailah Saadah (D1041241054)** 
+1. **Khairunnisa Nailah Saadah (D1041241054)** 
 
 2. **Naufrisya Rizqy Syabilla (D1041241081)**
 
