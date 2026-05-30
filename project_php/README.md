@@ -13,20 +13,39 @@ Project ini merupakan sistem sederhana yang digunakan untuk mengelola data trans
 *   **Delete**: Menghapus record transaksi tertentu dari sistem.
 
 ## Struktur Folder
-*   **`config/`**
-    └── `database.php`: Konfigurasi koneksi ke database
-*   **`public/`**
-    Berisi UI yang diakses langsung oleh user.
-    └── `index.php`: Halaman utama yang Menampilkan data transaksi pembelian dan terdapat fitur logout.
-    └── `tambah.php`: Menyediakan form input bagi user untuk menambah data transaksi baru.
-    └── `edit.php`: Menyediakan form yang berisi data lama untuk diperbarui oleh user.
-    └── `hapus.php`: Halaman konfirmasi sebelum data benar-benar dihapus dari sistem.
-    └── `login.php`: Halaman login untuk user masuk menggunakan username dan password lalu menyimpan role untuk membatasi hak akses tertentu.
-*   **`process/`**
-    Berfungsi mengeksekusi intruksi operasional database, berisi script yang menghubungkan interaksi di UI.
-    └── `insert.php`: Menyimpan data transaksi baru yang dikirim ke halaman tambah.
-    └── `update.php`: Menyimpan perubahan data pada transaksi yang telah diedit.
-    └── `delete.php`: Menghapus data transaksi yang dipilih dari sistem.
+project/
+│
+├── config/
+│   └── database.php
+│       Konfigurasi koneksi ke database.
+│
+├── public/
+│   ├── index.php
+│   │   Halaman utama yang menampilkan data transaksi pembelian
+│   │   serta menyediakan fitur logout.
+│   │
+│   ├── tambah.php
+│   │   Form untuk menambahkan data transaksi baru.
+│   │
+│   ├── edit.php
+│   │   Form untuk memperbarui data transaksi yang sudah ada.
+│   │
+│   ├── hapus.php
+│   │   Halaman konfirmasi penghapusan data transaksi.
+│   │
+│   └── login.php
+│       Halaman login yang memverifikasi username dan password
+│       serta menyimpan role pengguna untuk pembatasan hak akses.
+│
+└── process/
+    ├── insert.php
+    │   Menyimpan data transaksi baru ke database.
+    │
+    ├── update.php
+    │   Menyimpan perubahan data transaksi yang telah diedit.
+    │
+    └── delete.php
+        Menghapus data transaksi dari database.
 
 ## Struktur Tabel Utama
 Sistem ini berfokus pada tabel transaksi pembelian yang menyimpan seluruh record aktivitas pembelian barang ke supplier.
