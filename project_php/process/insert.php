@@ -23,6 +23,28 @@ if (!is_numeric($_POST['total'])) {
 if ($_POST['total'] <= 0) {
     die("Total pembelian tidak valid");
 }
+if (
+    empty($_POST['id']) ||
+    empty($_POST['tanggal']) ||
+    empty($_POST['id_barang']) || 
+    empty($_POST['supplier']) ||
+    empty($_POST['total']) ||
+    empty($_POST['admin'])
+) {
+    die("Semua field wajib diisi");
+}
+
+if (!preg_match('/^TRX[0-9]+$/', $_POST['id'])) {
+    die("ID transaksi harus diawali TRX dan hanya boleh diikuti angka");
+}
+
+if (!is_numeric($_POST['total'])) {
+    die("Total harus berupa angka");
+}
+
+if ($_POST['total'] <= 0) {
+    die("Total pembelian tidak valid");
+}
 
 try {
     $stmt1 = $conn->prepare(

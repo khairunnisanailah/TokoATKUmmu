@@ -320,7 +320,7 @@ td.aksi {
     <td><?= $row['Nama_barang']; ?></td>
     <td><?= $row['Tanggal_transaksi']; ?></td>
     <td><?= $row['Nama_supplier']; ?></td>
-<td><?= $row['Total_pembelian']; ?></td>
+<td><?= 'Rp ' . number_format($row['Total_pembelian'], 0, ',', '.'); ?></td>
 <td><?= $row['Nama_admin']; ?></td>
 
 <?php if ($_SESSION['role'] == 'admin') : ?>
