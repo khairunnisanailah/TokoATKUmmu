@@ -13,39 +13,36 @@ Project ini merupakan sistem sederhana yang digunakan untuk mengelola data trans
 *   **Delete**: Menghapus record transaksi tertentu dari sistem.
 
 ## Struktur Folder
+```text
 project/
-│
 ├── config/
 │   └── database.php
-│       Konfigurasi koneksi ke database.
 │
 ├── public/
 │   ├── index.php
-│   │   Halaman utama yang menampilkan data transaksi pembelian
-│   │   serta menyediakan fitur logout.
-│   │
 │   ├── tambah.php
-│   │   Form untuk menambahkan data transaksi baru.
-│   │
 │   ├── edit.php
-│   │   Form untuk memperbarui data transaksi yang sudah ada.
-│   │
 │   ├── hapus.php
-│   │   Halaman konfirmasi penghapusan data transaksi.
-│   │
 │   └── login.php
-│       Halaman login yang memverifikasi username dan password
-│       serta menyimpan role pengguna untuk pembatasan hak akses.
 │
 └── process/
     ├── insert.php
-    │   Menyimpan data transaksi baru ke database.
-    │
     ├── update.php
-    │   Menyimpan perubahan data transaksi yang telah diedit.
-    │
     └── delete.php
-        Menghapus data transaksi dari database.
+```
+### Keterangan
+#### config/
+- **database.php** → Konfigurasi koneksi ke database.
+#### public/
+- **index.php** → Halaman utama yang menampilkan data transaksi pembelian dan menyediakan fitur logout.
+- **tambah.php** → Form untuk menambahkan data transaksi baru.
+- **edit.php** → Form untuk memperbarui data transaksi yang sudah ada.
+- **hapus.php** → Halaman konfirmasi penghapusan data transaksi.
+- **login.php** → Halaman login untuk autentikasi pengguna dan penyimpanan role.
+**process/**
+- **insert.php** → Menyimpan data transaksi baru ke database.
+- **update.php** → Menyimpan perubahan data transaksi yang telah diedit.
+- **delete.php** → Menghapus data transaksi dari database.
 
 ## Struktur Tabel Utama
 Sistem ini berfokus pada tabel transaksi pembelian yang menyimpan seluruh record aktivitas pembelian barang ke supplier.
