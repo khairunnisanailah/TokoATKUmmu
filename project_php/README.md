@@ -1,6 +1,9 @@
 ## Anggota Kelompok 3
+
 1 **Khairunnisa Nailah Saadah (D1041241054)** 
+
 2. **Naufrisya Rizqy Syabilla (D1041241081)**
+
 3. **Ummu Kultsum (D1041241089)**
 
 ## Sistem Pencatatan Transaksi pada Toko ATK Ummu
