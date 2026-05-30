@@ -1,5 +1,10 @@
-# Sistem Pencatatan Transaksi pada Toko ATK Ummu
-Project ini merupakan sistem sederhana yang digunakan untuk mengelola data transaksi pembelian menggunakan integrasi PHP dan MySQLi. Sistem ini memungkinkan user melakukan operasi CRUD pada data transaksi.
+## Anggota Kelompok 3
+1 **Khairunnisa Nailah Saadah (D1041241054)** 
+2. **Naufrisya Rizqy Syabilla (D1041241081)**
+3. **Ummu Kultsum (D1041241089)**
+
+## Sistem Pencatatan Transaksi pada Toko ATK Ummu
+Project ini merupakan sistem sederhana yang digunakan untuk mengelola data transaksi pembelian dari supplier, menggunakan integrasi PHP dan MySQLi. Sistem ini memungkinkan user melakukan operasi CRUD pada data transaksi.
 
 ## Fitur
 *   **Read**: Menampilkan seluruh riwayat transaksi pembelian ke supplier yang tersimpan di sistem.
@@ -12,10 +17,11 @@ Project ini merupakan sistem sederhana yang digunakan untuk mengelola data trans
     └── `database.php`: Konfigurasi koneksi ke database
 *   **`public/`**
     Berisi UI yang diakses langsung oleh user.
-    └── `index.php`: Halaman utama yang Menampilkan data transaksi pembelian.
+    └── `index.php`: Halaman utama yang Menampilkan data transaksi pembelian dan terdapat fitur logout.
     └── `tambah.php`: Menyediakan form input bagi user untuk menambah data transaksi baru.
     └── `edit.php`: Menyediakan form yang berisi data lama untuk diperbarui oleh user.
     └── `hapus.php`: Halaman konfirmasi sebelum data benar-benar dihapus dari sistem.
+    └── `login.php`: Halaman login untuk user masuk menggunakan username dan password lalu menyimpan role untuk membatasi hak akses tertentu.
 *   **`process/`**
     Berfungsi mengeksekusi intruksi operasional database, berisi script yang menghubungkan interaksi di UI.
     └── `insert.php`: Menyimpan data transaksi baru yang dikirim ke halaman tambah.
@@ -62,5 +68,19 @@ Menyimpan seluruh detail barang yang terdapat pada setiak transaksi pembelian.
 ## Cara Menjalankan Project
 1. **Import Database**: Masuk ke phpMyAdmin, lalu import file database yang telah dibuat di mini project II (database tokoatkummu).
 2. **Konfigurasi Koneksi**: Sesuaikan pengaturan host, username, dan password pada file `config/database.php` agar terhubung ke database.
-3. **Membuat Folder Proyek**: Pindahkan seluruh folder proyek ke dalam direktori server lokal seperti folder `htdocs` pada XAMPP.
+3. **Membuat Folder Proyek**: Pindahkan seluruh folder proyek ke dalam direktori server lokal seperti folder `htdocs' pada XAMPP.
 4. **Akses Browser**: Buka browser dan arahkan alamat ke (link) untuk menjalankan aplikasi.
+     link Hosting: https://tokoatkummu.lovestoblog.com/
+
+## Analisis Sistem
+analisis yang telah kami lakukan untuk sistem ini, yaitu:
+1. **Analisis ACID**
+2. **Load Testing**
+3. **Benchmarking**
+4. **EXPLAIN Query**
+5. **Implementasi Index**
+6. **Backup dan Restore**
+7. **High Availibility**
+8. **Simulasi Error**
+9. **Pembatasan Hak Akses**
+10. **Concurency dan Isolation Level**
