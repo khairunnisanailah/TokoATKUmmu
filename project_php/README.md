@@ -45,41 +45,85 @@ project/
 - **delete.php** → Menghapus data transaksi dari database.
 
 ## Struktur Tabel Utama
+
 Sistem ini berfokus pada tabel transaksi pembelian yang menyimpan seluruh record aktivitas pembelian barang ke supplier.
-1. **TABEL ADMIN**
+
+### 1. Tabel Admin
+
 Menyimpan data admin yang bertugas mengelola transaksi pembelian.
-    a. **ID Admin**: Kode unik untuk identitas setiap admin toko ummu (primary key).
-    b. **Nama Admin**: Nama lengkap admin.
-2. **TABEL SUPPLIER**
+
+**a. ID Admin**  
+Kode unik untuk identitas setiap admin Toko Ummu (*Primary Key*).
+
+**b. Nama Admin**  
+Nama lengkap admin.
+
+### 2. Tabel Supplier
+
 Menyimpan data supplier atau pemasok barang toko.
-    a. **ID Supplier**: Kode unik untuk identitas setiap supplier (primary key).
-    b. **Nama Toko**: Nama toko supplier.
-    c. **Alamat**: Alamat lengkap toko supplier.
-    d. **Kontak**: Kontak atau nomor telepon untuk menghubungi supplier.
-3. Barang
+
+**a. ID Supplier**  
+Kode unik untuk identitas setiap supplier (*Primary Key*).
+
+**b. Nama Toko**  
+Nama toko supplier.
+
+**c. Alamat**  
+Alamat lengkap toko supplier.
+
+**d. Kontak**  
+Kontak atau nomor telepon untuk menghubungi supplier.
+
+### 3. Tabel Barang
+
 Menyimpan seluruh data barang yang tersedia di toko maupun yang dibeli dari supplier.
-    a. **ID Barang**: Kode unik untuk identitas setiap barang (primary key).
-    b. **Nama Barang**: Nama barang-barang ATK.
-    c. **Harga**: Harga barang ketika melakukan pembelian ke supplier.
-    d. **Stok**: Jumlah stok barang yang tersedia di toko ummu.
-    e. **ID Supplier**: Foreign key yang menghubungkan tabel barang tabel supplier.
-4. **TABEL TRANSAKSI PEMBELIAN**
+
+**a. ID Barang**  
+Kode unik untuk identitas setiap barang (*Primary Key*).
+
+**b. Nama Barang**  
+Nama barang ATK.
+
+**c. Harga**  
+Harga barang ketika melakukan pembelian ke supplier.
+
+**d. Stok**  
+Jumlah stok barang yang tersedia di Toko Ummu.
+
+**e. ID Supplier**  
+*Foreign Key* yang menghubungkan tabel barang dengan tabel supplier.
+
+### 4. Tabel Transaksi Pembelian
+
 Menyimpan seluruh data transaksi pembelian barang ke supplier.
-   a. **ID Transaksi**
-      Kode unik (primary key) untuk setiap transaksi pembelian.
-   b. **Tanggal Transaksi**
-      Tanggal beserta bulan dan tahun dilakukannya transaksi pembelian.
-   c. **ID Supplier**
-      Sebagai penghubung (foreign key) ke data toko supplier.
-   d. **Total Pembelian**
-      Menyimpan total biaya dari seluruh barang yang dibeli tiap transaksi.
-   e. **ID Admin**
-      Kode identitas admin yang bertanggung jawab menginput transaksi.
-5. **TABEL DETAIL TRANSAKSI**
-Menyimpan seluruh detail barang yang terdapat pada setiak transaksi pembelian.
-    a. **ID Barang**: Foreign key yang menghubungkan tabel detail transaksi dengan tabel barang.
-    b. **ID Transaksi**: Foreign key yang menghubungkan tabel detail transaksi dengan tabel transaksi pembelian.
-    c. **Quantity**: Jumlah barang yang dibeli pada setiap transaksi.
+
+**a. ID Transaksi**  
+Kode unik (*Primary Key*) untuk setiap transaksi pembelian.
+
+**b. Tanggal Transaksi**  
+Tanggal, bulan, dan tahun dilakukannya transaksi pembelian.
+
+**c. ID Supplier**  
+*Foreign Key* yang menghubungkan tabel transaksi pembelian dengan tabel supplier.
+
+**d. Total Pembelian**  
+Menyimpan total biaya seluruh barang yang dibeli dalam satu transaksi.
+
+**e. ID Admin**  
+Kode identitas admin yang bertanggung jawab menginput transaksi.
+
+### 5. Tabel Detail Transaksi
+
+Menyimpan seluruh detail barang yang terdapat pada setiap transaksi pembelian.
+
+**a. ID Barang**  
+*Foreign Key* yang menghubungkan tabel detail transaksi dengan tabel barang.
+
+**b. ID Transaksi**  
+*Foreign Key* yang menghubungkan tabel detail transaksi dengan tabel transaksi pembelian.
+
+**c. Quantity**  
+Jumlah barang yang dibeli pada setiap transaksi.
 
 
 ## Cara Menjalankan Project
