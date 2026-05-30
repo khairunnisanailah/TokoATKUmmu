@@ -65,6 +65,7 @@ Menyimpan seluruh detail barang yang terdapat pada setiak transaksi pembelian.
     b. **ID Transaksi**: Foreign key yang menghubungkan tabel detail transaksi dengan tabel transaksi pembelian.
     c. **Quantity**: Jumlah barang yang dibeli pada setiap transaksi.
 
+
 ## Cara Menjalankan Project
 1. **Import Database**: Masuk ke phpMyAdmin, lalu import file database yang telah dibuat di mini project II (database tokoatkummu).
 2. **Konfigurasi Koneksi**: Sesuaikan pengaturan host, username, dan password pada file `config/database.php` agar terhubung ke database.
@@ -74,13 +75,12 @@ Menyimpan seluruh detail barang yang terdapat pada setiak transaksi pembelian.
 
 ## Analisis Sistem
 analisis yang telah kami lakukan untuk sistem ini, yaitu:
-1. **Analisis ACID**
-2. **Load Testing**
-3. **Benchmarking**
+1. **Concurency dan Isolation Level**
+2. **Analisis ACID**
+2. **Load Testing dan Benchmarking**
 4. **EXPLAIN Query**
 5. **Implementasi Index**
-6. **Backup dan Restore**
-7. **High Availibility**
-8. **Simulasi Error**
-9. **Pembatasan Hak Akses**
-10. **Concurency dan Isolation Level**
+6. **Pembatasan Hak Akses**
+7. **Backup dan Restore**
+8. **High Availibility**
+9. **Simulasi Error**
