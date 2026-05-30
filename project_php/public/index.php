@@ -194,12 +194,10 @@ td.aksi {
     padding: 12px 18px;
     border-radius: 12px;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 22px;
-    margin-left: 12.5%;
     font-weight: 500;
     box-shadow: 0 5px 12px rgba(32,116,135,0.25);
     transition: 0.25s;
+    margin: 0;
 }
 
 .btn-tambah:hover {
@@ -280,38 +278,38 @@ td.aksi {
 <div class="decor4">☁</div>
 <div class="decor5">✦</div>
 <div class="decor6">❀</div>
+<div style="display:flex; justify-content:flex-end; margin-bottom:15px;">
 
-<div style="text-align:right; margin-bottom:20px;">
-
-    <a href="login.php?logout=true" 
-       style="
-       background:#940c1b;
-       color:white;
-       padding:10px 18px;
-       text-decoration:none;
-       border-radius:12px;
-       font-family:Poppins;
-       box-shadow:0 4px 10px rgba(148,12,27,0.2);
-       ">
-       Logout
+    <a href="login.php?logout=true" class="btn btn-hapus">
+        Logout
     </a>
 
 </div>
-
 <h2>
     Toko ATK Ummu <br>
     Data Transaksi Pembelian Barang
 </h2>
+
+<div style="display:flex; justify-content:flex-end; width:75%; margin:0 auto 15px auto;">
+    <?php if ($_SESSION['role'] == 'admin') : ?>
+        <a class="btn btn-tambah" href="tambah.php">
+            + Tambah Data
+        </a>
+    <?php endif; ?>
+</div>
 
 <table>
 <tr>
     <th>ID Transaksi</th>
     <th>Nama Barang</th>
     <th>Tanggal</th>
-    <th>Nama Toko Supplier</th> <th>Total</th>
-    <th>Nama Admin</th> <?php if ($_SESSION['role'] == 'admin') : ?>
-    <th>Aksi</th>
-<?php endif; ?>
+    <th>Nama Toko Supplier</th>
+    <th>Total</th>
+    <th>Nama Admin</th>
+
+    <?php if ($_SESSION['role'] == 'admin') : ?>
+        <th>Aksi</th>
+    <?php endif; ?>
 </tr>
 
 <?php foreach ($data as $row): ?>
@@ -320,28 +318,24 @@ td.aksi {
     <td><?= $row['Nama_barang']; ?></td>
     <td><?= $row['Tanggal_transaksi']; ?></td>
     <td><?= $row['Nama_supplier']; ?></td>
-<td><?= 'Rp ' . number_format($row['Total_pembelian'], 0, ',', '.'); ?></td>
-<td><?= $row['Nama_admin']; ?></td>
+    <td><?= 'Rp ' . number_format($row['Total_pembelian'], 0, ',', '.'); ?></td>
+    <td><?= $row['Nama_admin']; ?></td>
 
-<?php if ($_SESSION['role'] == 'admin') : ?>
-<td class="aksi">
-    <a class="btn btn-edit" href="edit.php?id=<?= $row['Id_transaksi']; ?>">
-        Edit
-    </a>
-    <a class="btn btn-hapus" href="hapus.php?id=<?= $row['Id_transaksi']; ?>">
-        Hapus
-    </a>
-</td>
-<?php endif; ?>
+    <?php if ($_SESSION['role'] == 'admin') : ?>
+    <td class="aksi">
+        <a class="btn btn-edit" href="edit.php?id=<?= $row['Id_transaksi']; ?>">
+            Edit
+        </a>
+
+        <a class="btn btn-hapus" href="hapus.php?id=<?= $row['Id_transaksi']; ?>">
+            Hapus
+        </a>
+    </td>
+    <?php endif; ?>
 </tr>
 <?php endforeach; ?>
+
 </table>
-    <?php if ($_SESSION['role'] == 'admin') : ?>
-    <a class="btn btn-tambah" href="tambah.php">
-        + Tambah Data
-    </a>
-<?php endif; ?>
+
 </body>
 </html>
-
-
