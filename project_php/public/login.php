@@ -208,7 +208,7 @@ h2{
 
 <div class="login-box">
 
-    <h2>Login Admin</h2>
+    <h2>Login</h2>
 
     <?php if($error != "") : ?>
         <div class="error">
